@@ -1,0 +1,24 @@
+{
+  "name": "burger",
+  "version": "1.0.0",
+  "description": "bootcamp hw 15",
+  "main": "server.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wherding/burger.git"
+  },
+  "author": "will",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wherding/burger/issues"
+  },
+  "homepage": "https://github.com/wherding/burger#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "express-handlebars": "^3.0.0",
+    "mysql": "^2.16.0"
+  }
+}
