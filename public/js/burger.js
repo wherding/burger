@@ -5,8 +5,9 @@ $(function(){
         var newSleep = $(this).data("newsleep");
     
         var newSleepState = {
-          sleepy: newSleep
+          devoured: newSleep
         }; 
+        console.log("sleep state: " + newSleepState);
     
         // Send the PUT request.
         $.ajax("/api/burgers/" + id, {
