@@ -25,10 +25,10 @@ router.put("/api/burgers/:id", function (req, res) {
     },
         condition, function (result) {
             if (result.changedRows == 0) {
-                return res.status(404).end;
+                return res.status(404).end();
             }
             else {
-                res.status(200).end
+               return res.status(200).end();
             }
         });
 })//end put()
