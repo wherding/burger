@@ -27,8 +27,28 @@ selectAll: function(tableInput,cb){
         cb(result);
     });
 },
-insertOne: function(idk){
+insertOne: function(table, cols, vals, cb){
+    var queryString = "INSERT INTO " + table;
 
+    queryString += " (";
+    queryString += cols.toString();
+    queryString += ") ";
+    queryString += "VALUES (";
+    //what is print question marks? 
+    queryString += vals[0];
+    queryString += ',';
+    queryString += vals[1];
+    queryString += ") ";
+
+    console.log(queryString);
+
+    connection.query(queryString, vals, function(err, result) {
+      if (err) {
+        throw err;
+      }
+
+      cb(result);
+    });
 },
 updateOne: function (tableInput,objColVals, condition, cb){
     //var queryString = 'update ?? set ?? where ??';
