@@ -28,16 +28,17 @@ selectAll: function(tableInput,cb){
     });
 },
 insertOne: function(table, cols, vals, cb){
+    console.log(queryString);
     var queryString = "INSERT INTO " + table;
 
     queryString += " (";
     queryString += cols.toString();
     queryString += ") ";
-    queryString += "VALUES (";
+    queryString += "VALUES ('";
     //what is print question marks? 
-    queryString += vals[0];
+    queryString += vals[0] + "'";
     queryString += ',';
-    queryString += vals[1];
+    queryString +=  vals[1];
     queryString += ") ";
 
     console.log(queryString);
